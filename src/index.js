@@ -4,10 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { createStore, combineReducers } from "redux"
+import { Provider } from "react-redux"
+import ListchairReduce from "./ex1/redux/ListchairReduce"
+
+const rootReduce = combineReducers({
+  chair: ListchairReduce
+})
+const store = createStore(rootReduce)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+
+
   </React.StrictMode>
 );
 

@@ -1,0 +1,17 @@
+.chair{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+.chair.booked{
+    background-color: yellow;
+    border-color: yellow;
+}
+.booking{
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
